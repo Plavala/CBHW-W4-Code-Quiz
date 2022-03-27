@@ -1,0 +1,57 @@
+body {
+    background-color: rgba(177, 125, 236, 0.815); 
+}
+
+h1, 
+h2 {
+    color: black;
+    font-family: 'sans-serif';
+}
+
+    .image img {
+        height: 300px;
+        width: 100%;
+        margin-bottom: 25px;
+        object-fit: cover;
+
+
+}
+
+a {
+    color: rgb(32, 6, 177);
+    font-family: 'sans-serif';
+}
+
+a:hover {
+    color: black;
+    font-family: 'sans-serif';
+}
+
+.btn:focus, .btn:active, .btn:visited {
+    outline: none !important;
+    box-shadow: none !important;
+    background-color:black;
+}
+
+#finalScore {
+    font-family:  'sans-serif';
+    font-weight: bold;
+}
+
+span {
+    font-family: 'sans-serif';
+}
+
+p {
+    font-family: 'sans-serif';
+}
+
+#questionTitle {
+    font-size: 20px;
+    font-family: 'sans-serif';
+}
+
+#answerCheck {
+    font-style: italic;
+    color: blue;
+}
