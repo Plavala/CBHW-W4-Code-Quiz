@@ -12,19 +12,28 @@ var questionIndex = 0;
 
 //*functions
 startQuiz.addEventListener("click", start);
-choiceOne.addEventListener("click", next);
-choiceTwo.addEventListener("click", next);
-choiceThree.addEventListener("click", next);
-choiceFour.addEventListener("click", next);
+choiceOne.addEventListener("click", next(0));
+choiceTwo.addEventListener("click", next(1));
+choiceThree.addEventListener("click", next(2));
+choiceFour.addEventListener("click", next(3));
 
-function next() {
-    choiceOne.innerHTML = questions[questionIndex].choices[0].title;
-    choiceTwo.innerHTML = questions[questionIndex].choices[1].title;
-    choiceThree.innerHTML = questions[questionIndex].choices[2].title;
-    choiceFour.innerHTML = questions[questionIndex].choices[3].title;
-    question.innerHTML = questions[questionIndex].question;
+function next(choiceIndex) {
+    if(questionIndex != 0) {
+        var wasCorrectAnswer = questions[questionIndex-1].choices[choiceIndex].correct;
+        
+    }
 
-    questionIndex++;
+    if(questionIndex === 10) {
+        
+    } else {
+        choiceOne.innerHTML = questions[questionIndex].choices[0].title;
+        choiceTwo.innerHTML = questions[questionIndex].choices[1].title;
+        choiceThree.innerHTML = questions[questionIndex].choices[2].title;
+        choiceFour.innerHTML = questions[questionIndex].choices[3].title;
+        question.innerHTML = questions[questionIndex].question;
+
+        questionIndex++;
+    }
 }
 
 function start() {
