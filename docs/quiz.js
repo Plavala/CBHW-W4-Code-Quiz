@@ -44,78 +44,78 @@ var questions = [
     {
         question: "Which liquor is used to make a Bloody Mary?",
         choices: [
-            { title: "", correct: false },
-            { title: "", correct: false },
-            { title: "", correct: false },
-            { title: "", correct: true },
+            { title: "Rum", correct: false },
+            { title: "Gin", correct: false },
+            { title: "Tequila", correct: false },
+            { title: "Vodka", correct: true },
         ]
     },
     {
-        question: "",
+        question: "Which of these cocktails could be ordered dry or dirty?",
         choices: [
-            { title: "", correct: false },
-            { title: "", correct: false },
-            { title: "", correct: false },
-            { title: "", correct: true },
+            { title: "Americano", correct: false },
+            { title: "Manhattan", correct: false },
+            { title: "Martini", correct: true },
+            { title: "Old fashiond", correct: false },
         ]
     },
     {
-        question: "",
+        question: "Which cocktail is made with these ingredients: vodka, triple sec, cranberry juice and lime juice?",
         choices: [
-            { title: "", correct: false },
-            { title: "", correct: false },
-            { title: "", correct: false },
-            { title: "", correct: true },
+            { title: "Painkiller", correct: false },
+            { title: "mojito", correct: false },
+            { title: "Cosmpolitan", correct: true },
+            { title: "Blue blazer", correct: false },
         ]
     },
     {
-        question: "",
+        question: "Which cocktail is made with these ingredients: Amaretto liqueur and sweet and sour mix?",
         choices: [
-            { title: "", correct: false },
-            { title: "", correct: false },
-            { title: "", correct: false },
-            { title: "", correct: true },
+            { title: "Amaretto peaches", correct: false },
+            { title: "Amaretto Sour", correct: true },
+            { title: "Amaretto Supreme", correct: false },
+            { title: "Amaretto splash", correct: false },
         ]
     },
     {
-        question: "",
+        question: "A hairy navel is the stronger version of which drink?",
         choices: [
-            { title: "", correct: false },
-            { title: "", correct: false },
-            { title: "", correct: false },
-            { title: "", correct: true },
+            { title: "Fuzzy navel", correct: true },
+            { title: "Peachy navel", correct: false },
+            { title: "Buttery navel", correct: false },
+            { title: "Mossy navel", correct: false },
         ]
     },{
-        question: "",
+        question: "What exactly is the sunrise in a Tequila sunrise?",
         choices: [
-            { title: "", correct: false },
-            { title: "", correct: false },
-            { title: "", correct: false },
-            { title: "", correct: true },
+            { title: "Lime juice & grenadine", correct: false },
+            { title: "Grapefruit juice & curacao", correct: false },
+            { title: "Orange juice & grenadine", correct: true },
+            { title: "Lime juice & peach schnapps", correct: false },
         ]
     },{
-        question: "",
+        question: "When a customer asks for a house margarita, what is the underlying flavor?",
         choices: [
-            { title: "", correct: false },
-            { title: "", correct: false },
-            { title: "", correct: false },
-            { title: "", correct: true },
+            { title: "Strawberry", correct: false },
+            { title: "Pineapple", correct: false },
+            { title: "Lemon/Lime", correct: true },
+            { title: "Orange", correct: false },
         ]
     },{
-        question: "",
+        question: "What does a Blue Moon beer get garnished with?",
         choices: [
-            { title: "", correct: false },
-            { title: "", correct: false },
-            { title: "", correct: false },
-            { title: "", correct: true },
+            { title: "Lemon", correct: false },
+            { title: "Lime", correct: false },
+            { title: "Mint", correct: false },
+            { title: "Orange", correct: true },
         ]
     },{
-        question: "",
+        question: "Which liqueur is used in margaritas?",
         choices: [
-            { title: "", correct: false },
-            { title: "", correct: false },
-            { title: "", correct: false },
-            { title: "", correct: true },
+            { title: "Vodka", correct: false },
+            { title: "Gin", correct: false },
+            { title: "Rum", correct: false },
+            { title: "Tequila", correct: true },
         ]
     },
 
