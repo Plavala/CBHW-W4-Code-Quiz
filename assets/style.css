@@ -1,0 +1,60 @@
+.image {
+    height: 200px;
+    width: 100%;
+    margin-bottom: 25px;
+    size-adjust: 100px;
+
+}
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+
+.body {
+    background-color: #fdfbff;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+/* Main content */
+.main {
+    flex: 1 0 auto;
+    color: rgb(145, 35, 179);
+}
+
+/* Footer */
+.footer {
+    flex-shrink: 0;
+    font-size: .5rem;
+    
+}
+
+/* hide sections until they are shown via the click events */
+#questions,
+#final,
+#highscores,
+#yaynay {
+    display: none;  
+  } 
+
+/* Remove bullet points from answers list */
+.ul.nobullets {
+list-style-type: none;
+}
+
+/* Answer button styling */
+.ansBtn,
+.ansBtn:hover,
+.ansBtn:active,
+.ansBtn:focus,
+.ansBtn:active:focus {
+    box-shadow: none;
+    outline: none;
+    background-color: #630d85;
+}
+
