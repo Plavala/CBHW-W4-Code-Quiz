@@ -1,0 +1,84 @@
+body {
+    background-color: rgb(49, 17, 49)
+}
+
+* {
+    box-sizing: border-box;
+    margin: 2;
+    padding: 2;
+    font-size: 66.5%;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
+}
+
+h1 {
+    font-size: 6.4rem;
+    color: blanchedalmond;
+    margin-bottom: 6rem;
+}
+
+h2 {
+    font-size: 5.2rem;
+    margin-bottom: 4rem;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.flex-colum {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+.hidden {
+    display: none;
+}
+
+.btn {
+    font-size: 2.4rem;
+    padding: 2rem 0;
+    width: 30rem;
+    text-align:  center;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: blueviolet;
+    background: linear-gradient(90deg, rgb(14, 14, 63) 0%, rgb(57, 57, 163) 100%);
+    border-radius: 4px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgb(44, 23, 61);
+    transition: transform 150ms;
+    transform: scale(1.03);
+}
+
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+#highscore-btn {
+    background: linear-gradient(90deg, purple);
+}
