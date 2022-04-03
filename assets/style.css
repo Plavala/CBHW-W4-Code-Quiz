@@ -1,9 +1,10 @@
 .image {
-    height: 200px;
+    height: 100%;
     width: 100%;
+    position: fixed;
     margin-bottom: 25px;
     size-adjust: 100px;
-
+    z-index: -999;
 }
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -19,6 +20,10 @@ body {
     display: flex;
     flex-direction: column;
     color: white;
+}
+
+.container {
+    background: rgba(108, 0, 120, 0.65);
 }
 
 /* Main content */
@@ -38,7 +43,7 @@ body {
 #questions,
 #final,
 #highscores,
-#yaynay {
+#barbar {
     display: none;  
   } 
 

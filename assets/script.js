@@ -3,6 +3,7 @@
 var timeEl = document.querySelector("p.time");
 var secondsLeft = 75;
 var scoreEl = document.querySelector("#score");
+var numOfCorrectAnswers = 0;
 
 // sections
 // section intro
@@ -16,7 +17,7 @@ var questionEl = document.querySelector("#question");
 // how many questions they have answered
 var questionCount = 0;
 // div yaynay
-const yaynayEl = document.querySelector("#yaynay");
+const yaynayEl = document.querySelector("#barbar");
 
 // section final
 const finalEl = document.querySelector("#final");
@@ -58,61 +59,61 @@ const questions = [ // array of objects
         // question 0
         question: "Screwdrivers include what fruit juice?",
         answers: ["1. Apple juice", "2. Cranberry juice", "3. Orange juice", "4. Grape juice"],
-        correctAnswer: "3. Orange juice"
+        correctAnswer: "3"
     },
     {
         // question 1
         question: "Which liquor is used to make a Bloody Mary?",
         answers: ["1. Rum", "2. Gin", "3. Tequila", "4. Vodka"],
-        correctAnswer: "4. Vodka"
+        correctAnswer: "4"
     },
     {
         // question 2
         question: "Which of these cocktails could be ordered dry or dirty?",
         answers: ["1. Americano", "2. Manhattan", "3. Martini", "4. Old fashiond"],
-        correctAnswer: "3. Martini"
+        correctAnswer: "3"
     },
     {
         // question 3
         question: "Which cocktail is made with these ingredients: vodka, triple sec, cranberry juice and lime juice?",
         answers: ["1. Painkiller", "2. Mojito", "3. Cosmpolitan", "4. Blue clazer"],
-        correctAnswer: "3. Cosmpolitan"
+        correctAnswer: "3"
     },
     {
         // question 4
         question: "Which cocktail is made with these ingredients: Amaretto liqueur and sweet and sour mix?",
         answers: ["1. Amaretto peaches", "2. Amaretto sour", "3. Amaretto supreme", "4. Amoretto splash"],
-        correctAnswer: "2. Amaretto sour"
+        correctAnswer: "2"
     },
     {
         // question 5
         question: "A hairy navel is the stronger version of which drink?",
         answers: ["1. Fuzzy navel", "2. Peachy navel", "3. Buttery navel", "4. Mossy navel"],
-        correctAnswer: "1. Fuzzy navel"
+        correctAnswer: "1"
     },
     {
         // question 6
         question: "What exactly is the sunrise in a Tequila sunrise?",
         answers: ["1. Lime juice & grenadine", "2. grapefruit juice & curacao", "3. Orange juice & grenadine", "4. Lime juice & peach schnapps"],
-        correctAnswer: "3. Orange juice & grenadine"
+        correctAnswer: "3"
     },
     {
         // question 7
         question: "When a customer asks for a house margarita, what is the underlying flavor?",
         answers: ["1. Strawberry", "2. Pineapple", "3. Lemon/lime", "4. Orange"],
-        correctAnswer: "3. Lemon/lime"
+        correctAnswer: "3"
     },
     {
         // question 8
         question: "What does a Blue Moon beer get garnished with?",
         answers: ["1. Lemon", "2. Lime", "3. Mint", "4. Orange"],
-        correctAnswer: "4. Orange"
+        correctAnswer: "4"
     },
     {
         // question 9
         question: "Which liqueur is used in margaritas?",
         answers: ["1. Vodka", "2. Gin", "3. Rum", "4. Tequila"],
-        correctAnswer: "4. Tequila"
+        correctAnswer: "4"
     }
 ];
 
@@ -123,13 +124,14 @@ const questions = [ // array of objects
 function setTime() {
     var timerInterval = setInterval(function () {
         secondsLeft--;
-        timeEl.textContent = `Time:${secondsLeft}s`;
+        timeEl.textContent = `Time: ${secondsLeft}s`;
 
-        if (secondsLeft === 0 || questionCount === questions.length) {
+        if (secondsLeft <= 0 || questionCount === questions.length) {
+            timeEl.textContent = `Time: 0s`;
             clearInterval(timerInterval);
             questionsEl.style.display = "none";
             finalEl.style.display = "block";
-            scoreEl.textContent = secondsLeft;
+            scoreEl.textContent = numOfCorrectAnswers;
         }
     }, 1000);
 }
@@ -139,6 +141,7 @@ function startQuiz() {
     introEl.style.display = "none";
     questionsEl.style.display = "block";
     questionCount = 0;
+    numOfCorrectAnswers = 0;
 
     setTime();
     setQuestion(questionCount);
@@ -172,6 +175,7 @@ function checkAnswer(event) {
     // answer checker
     if (questions[questionCount].correctAnswer === event.target.value) {
         p.textContent = "Correct!";
+        numOfCorrectAnswers++;
     } else if (questions[questionCount].correctAnswer !== event.target.value) {
         secondsLeft = secondsLeft - 10;
         p.textContent = "Wrong!";
@@ -192,7 +196,7 @@ function addScore(event) {
     highscoresEl.style.display = "block";
 
     var init = initialsInput.value.toUpperCase();
-    scoreList.push({ initials: init, score: secondsLeft });
+    scoreList.push({ initials: init, score: numOfCorrectAnswers });
 
     // sort scores
     scoreList = scoreList.sort((a, b) => {
