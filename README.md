@@ -7,7 +7,7 @@ For our fourth homework we were tasked to create a timed 10 question quiz of our
 
 *Here is an example of what that page looks like.*
 
-![The site has a text box and button to start the Bar quiz.](assets/images/bar quiz.png)
+![The site has a text box and button to start the Bar quiz.](assets/images/bar-quiz.png)
 
 
 ```
